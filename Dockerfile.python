@@ -1,0 +1,4 @@
+FROM python:3.5
+MAINTAINER Ivan Mesic <ivan.mesic@simplesource.hr>
+
+RUN pip install pgcli

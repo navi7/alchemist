@@ -1,0 +1,4 @@
+FROM jupyter/minimal-notebook
+MAINTAINER Ivan Mesic <ivan.mesic@simplesource.hr>
+
+RUN conda install -y sqlalchemy psycopg2

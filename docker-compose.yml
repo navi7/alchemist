@@ -1,0 +1,15 @@
+alchemist_db:
+  image: postgres:9.5
+  environment:
+    - POSTGRES_USER=alchemist
+    - POSTGRES_DB=alchemist
+
+alchemist:
+  image: navi7/jupyter
+  links:
+    - "alchemist_db"
+  volumes:
+    - ".:/alchemist"
+  ports:
+    - "8888:8888"
+#  command: "tail -f /dev/null"
